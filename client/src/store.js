@@ -10,9 +10,9 @@ const store = createStore(
   rootReducer,
   initialState,
   compose(
-    applyMiddleware(...middleware)
-    // I commented this line for now because I got an error because of it.
-    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    applyMiddleware(...middleware),
+    // this for the redux dev tools
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 );
 
